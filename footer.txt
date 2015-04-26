@@ -1,0 +1,11 @@
+lib.footer = COA 
+lib.footer { 
+    1 = TEXT 
+    1.data = date:Y
+    2 = TEXT
+    2.value = &nbsp &copy; &nbsp 
+    3 = TEXT 
+    3.data = page:subtitle 
+    4 = TEXT
+    4.value = &nbsp - www.meine-domain.de
+ }

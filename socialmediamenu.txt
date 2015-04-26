@@ -1,0 +1,77 @@
+lib.socialmediamenu = HMENU 
+lib.socialmediamenu {
+    # first level
+    #subparts.MENU.1 = TMENU
+    #subparts.MENU.1.noBlur = 1
+    special = directory
+    special.value = 16
+    expAll = 1
+    wrap = <ul id="categorymenu">|</ul>
+  1 = TMENU
+  1.noBlur = 1
+  #1.wrap = <ul>|</ul>
+  1{
+          # no state: formatting for normal items
+    NO{
+      wrapItemAndSub = <li class="levelm1">|</li>
+    }
+             # act state: valid from the rootpage to the actual page
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li class="levelm1">|</li>
+    }
+             # cur state: valid for the actual page
+    CUR=1
+    CUR{
+wrapItemAndSub = <li class="levelm1">|</li>
+    }
+             # ifsub state: valid for pages that have subpages
+    IFSUB=1
+    expAll = 2
+    IFSUB{
+      wrapItemAndSub = <li class="levelm1">|</li>
+    }
+  }
+      # second level     
+  2 = TMENU
+  2.noBlur = 1
+  2.wrap = <ul class="levelm2">|</ul>
+  2{
+    NO{
+      wrapItemAndSub = <li class="levelm2">|</li>
+    }
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li class="levelm2">|</li>
+    }
+    CUR=1
+    CUR{
+      wrapItemAndSub = <li class="levelm2">|</li>
+    }
+    IFSUB=1
+   
+    IFSUB{
+      wrapItemAndSub = <li class="levelm2">|</li>
+    }
+  }
+      # third level     
+  3 = TMENU
+  3.wrap = <ul class="levelm3seo">|</ul>
+  3{
+    NO{
+      wrapItemAndSub = <li class="levelm3seo">|</li>
+    }
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li class="levelm3seo">|</li>
+    }
+    CUR=1
+    CUR{
+      wrapItemAndSub = <li class="levelm3seo">|</li>
+    }
+    IFSUB=1
+    IFSUB{
+      wrapItemAndSub = <li class="levelm3seo">|</li>
+    }
+  }
+  }

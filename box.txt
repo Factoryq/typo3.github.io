@@ -1,0 +1,33 @@
+lib.box = CONTENT
+lib.box {
+table = tt_content
+
+ select {
+    pidInList = 8
+      orderBy = sorting
+      where = colPos = 0
+ }
+
+renderObj = COA
+renderObj {
+       
+
+        10 = TEXT
+        10.field = header
+        10.wrap = <p class="boxvnHeader">|</p>
+        15=IMAGE
+        15{
+            # Objekt nur ausgeben wenn nicht leer
+         required=1
+         wrap=<div class="boxvnBody">|
+         file.import=images
+         file.import.field=image
+         file.width=180
+         #file.height=200
+         }
+   20 = TEXT
+   20.field = bodytext
+   #20.crop = 110 | ... | 1
+   20.wrap = |</div>
+        }
+  }

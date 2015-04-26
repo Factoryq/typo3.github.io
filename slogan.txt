@@ -1,0 +1,21 @@
+lib.standard = CONTENT
+lib.standard {
+table = tt_content
+
+ select {
+    pidInList = 13
+      orderBy = sorting
+      where = colPos = 0
+ }
+
+renderObj = COA
+renderObj {
+        10 = TEXT
+        10.field = header
+   10.wrap = <p class="startsloganHeader">|</p>
+   20 = TEXT
+   20.field = bodytext
+   20.wrap = <div class="startsloganBody">|</div>
+        }
+  }</div></p>
+

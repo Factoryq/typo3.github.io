@@ -1,0 +1,19 @@
+lib.topnavi = HMENU
+lib.topnavi {
+  special = directory
+  # value ist die ID der Ausgangsseite für das Menü
+  special.value = 2
+ 
+  1 = TMENU
+  1 {
+    noBlur = 1
+    NO = 1
+    NO.allWrap = ||*|&nbsp;&#47;&nbsp;||*|
+     # &#47;   == &#124;
+    NO.ATagTitle.field = subtitle // abstract // description // title
+ 
+    CUR = 1
+    CUR.allWrap = <strong class="navioben">|</strong>|*|&nbsp;&#124;&nbsp;<strong class="navioben">|</strong>
+    CUR.doNotLinkIt = 1
+  }
+}
